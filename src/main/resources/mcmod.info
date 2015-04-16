@@ -1,0 +1,16 @@
+[
+{
+  "modid": "dangersense",
+  "name": "DangerSense",
+  "description": "Gives the player a Danger Sense",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Leviathan143"],
+  "credits": "Leviathan143",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
