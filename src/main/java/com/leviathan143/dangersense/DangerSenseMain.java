@@ -3,6 +3,7 @@ package com.leviathan143.dangersense;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.MinecraftForge;
 
+import com.leviathan143.dangersense.config.Config;
 import com.leviathan143.dangersense.lib.DSConstants;
 import com.leviathan143.dangersense.lib.DangerSenseHandler;
 
@@ -18,7 +19,7 @@ public class DangerSenseMain
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		
+		Config.preinit(event);
 	}
 	
 	@Mod.EventHandler

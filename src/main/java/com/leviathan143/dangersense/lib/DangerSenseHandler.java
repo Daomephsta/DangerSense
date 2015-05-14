@@ -17,6 +17,8 @@ import net.minecraftforge.client.event.FOVUpdateEvent;
 
 import org.lwjgl.opengl.GL11;
 
+import com.leviathan143.dangersense.config.Config;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.Phase;
@@ -39,14 +41,13 @@ public class DangerSenseHandler
 	@SubscribeEvent
 	public void dangerSense(TickEvent.RenderTickEvent event)
 	{	
-		if (player != null && event.phase == Phase.START && player.ticksExisted % 20 == 0)
+		if (player != null && event.phase == Phase.START && player.ticksExisted % Config.scanTimeInTicks == 0)
 		{	
 			double playerX = player.posX;
 			double playerY = player.posY;
 			double playerZ = player.posZ;
-			double distance = 5.0; 
-			AxisAlignedBB searchBox = AxisAlignedBB.getBoundingBox(playerX - distance,playerY - 1,playerZ - distance,
-				playerX + distance,playerY + distance,playerZ + distance);
+			AxisAlignedBB searchBox = AxisAlignedBB.getBoundingBox(playerX - Config.detectionRange, playerY - 1, playerZ - Config.detectionRange,
+				playerX + Config.detectionRange, playerY + Config.detectionRange, playerZ + Config.detectionRange);
 			World world = MinecraftServer.getServer().getEntityWorld();
 			@SuppressWarnings("unchecked")
 			List<Entity> entitiesNearby = world.getEntitiesWithinAABB(EntityLiving.class, searchBox);
@@ -60,12 +61,6 @@ public class DangerSenseHandler
 							if(flag)
 							{
 								hostileNearby = true;
-								//System.out.println(hostileNearby);
-							}
-							if(!flag)
-							{
-								hostileNearby = false;
-								//System.out.println(hostileNearby);System.out.println(hostileNearby);
 							}
 				}	
 			}
