@@ -20,6 +20,7 @@ public class DangerSenseMain
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		Config.preinit(event);
+		DangerSenseHandler.setGuiOpen();
 	}
 	
 	@Mod.EventHandler

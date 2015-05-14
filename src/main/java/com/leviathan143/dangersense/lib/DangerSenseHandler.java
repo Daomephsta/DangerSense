@@ -3,6 +3,12 @@ package com.leviathan143.dangersense.lib;
 import java.util.List;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiCreateFlatWorld;
+import net.minecraft.client.gui.GuiCreateWorld;
+import net.minecraft.client.gui.GuiDownloadTerrain;
+import net.minecraft.client.gui.GuiIngameMenu;
+import net.minecraft.client.gui.GuiMainMenu;
+import net.minecraft.client.gui.GuiSelectWorld;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.entity.Entity;
@@ -14,6 +20,7 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.FOVUpdateEvent;
+import net.minecraftforge.client.event.GuiOpenEvent;
 
 import org.lwjgl.opengl.GL11;
 
@@ -28,6 +35,7 @@ public class DangerSenseHandler
 	private float blindSpot;
 	private float localFov;
 	private boolean hostileNearby;
+	private static boolean guiOpen = false;
 	private Entity nearbyEntity;
 	private static final ResourceLocation RES_DANGER_OVERLAY = new ResourceLocation("dangersense" + ":" + "misc/danger_overlay.png");
 	EntityPlayer player;
@@ -57,10 +65,10 @@ public class DangerSenseHandler
 				for(int i = 0; i < entityCount; i++)
 				{
 					nearbyEntity = entitiesNearby.get(i);
-							boolean flag = nearbyEntity.isCreatureType(EnumCreatureType.monster, false) && !entitiesNearby.isEmpty();
-							if(flag)
+					boolean hostile = nearbyEntity.isCreatureType(EnumCreatureType.monster, false) && !entitiesNearby.isEmpty();
+							if(hostile)
 							{
-								hostileNearby = true;
+									hostileNearby = true;
 							}
 				}	
 			}
@@ -77,7 +85,7 @@ public class DangerSenseHandler
 		ScaledResolution scaledresolution = new ScaledResolution(Minecraft.getMinecraft(), Minecraft.getMinecraft().displayWidth, Minecraft.getMinecraft().displayHeight);
         int k = scaledresolution.getScaledWidth();
         int l = scaledresolution.getScaledHeight();
-		if (event.phase == Phase.END && hostileNearby)
+		if (event.phase == Phase.END && hostileNearby && !guiOpen)
 		{	
 	        GL11.glDepthMask(false);
 	        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
@@ -107,5 +115,29 @@ public class DangerSenseHandler
 		{		localFov = Minecraft.getMinecraft().gameSettings.fovSetting;
 				blindSpot = 360 - localFov;
 		}
+	}
+	
+	@SubscribeEvent
+	public void fixOverlayArtifact(GuiOpenEvent event)
+	{
+		System.out.println("GUI Opened" + " " + event.gui);
+		System.out.println(guiOpen + "119");
+		if (!(event.gui instanceof GuiMainMenu || event.gui instanceof GuiCreateWorld 
+				|| event.gui instanceof GuiCreateFlatWorld || event.gui instanceof GuiSelectWorld 
+				|| event.gui instanceof GuiDownloadTerrain || event.gui instanceof GuiIngameMenu
+				|| event.gui == null))
+		{
+			guiOpen = true;
+		}
+		if(event.gui == null)
+		{
+			guiOpen = false;
+		}
+	}
+	
+	public static void setGuiOpen()
+	{
+		guiOpen = false;
+		System.out.println(guiOpen + "127");
 	}
 }
