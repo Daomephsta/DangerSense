@@ -1,0 +1,16 @@
+[
+{
+  "modid": "dangersense",
+  "name": "DangerSense",
+  "description": "Gives the player a danger sense",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Leviathan143"],
+  "credits": "A small amount of code was borrowed from the Minecraft source code",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

@@ -1,7 +1,7 @@
 package com.leviathan143.dangersense.config;
 
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Config 
 {
