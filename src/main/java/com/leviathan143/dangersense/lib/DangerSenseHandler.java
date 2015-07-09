@@ -89,21 +89,7 @@ public class DangerSenseHandler
         int l = scaledresolution.getScaledHeight();
 		if (event.phase == Phase.END && hostileNearby && !guiOpen)
 		{	
-	        GL11.glDepthMask(false);
-	        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-	        GL11.glDisable(GL11.GL_ALPHA_TEST);
-	        Minecraft.getMinecraft().getTextureManager().bindTexture(RES_DANGER_OVERLAY);
-	        Tessellator tessellator = Tessellator.getInstance();
-	        WorldRenderer worldrenderer = tessellator.getWorldRenderer();
-	        worldrenderer.startDrawingQuads();
-	        worldrenderer.addVertexWithUV(0.0D, (double)l, -90.0D, 0.0D, 1.0D);
-	        worldrenderer.addVertexWithUV((double)k, (double)l, -90.0D, 1.0D, 1.0D);
-	        worldrenderer.addVertexWithUV((double)k, 0.0D, -90.0D, 1.0D, 0.0D);
-	        worldrenderer.addVertexWithUV(0.0D, 0.0D, -90.0D, 0.0D, 0.0D);
-	        tessellator.draw();
-	        GL11.glDepthMask(true);
-	        GL11.glEnable(GL11.GL_ALPHA_TEST);
-	        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+
 		}
 		if (blindSpot == 7)
 		{
