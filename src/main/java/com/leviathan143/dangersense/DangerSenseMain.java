@@ -28,12 +28,12 @@ public class DangerSenseMain
 		DSPotions.expandPotions();
 		DSPotions.init();
 		DSItems.init();
-		DSRecipes.init();
 	}
 	
 	@Mod.EventHandler
 	public void Init(FMLInitializationEvent event)
 	{
+		DSRecipes.init();
 		ChestGenHooks.addItem(ChestGenHooks.DUNGEON_CHEST, new WeightedRandomChestContent(new ItemStack(DSItems.dangerPotion), 1, 1, 100));
 		ChestGenHooks.addItem(ChestGenHooks.MINESHAFT_CORRIDOR, new WeightedRandomChestContent(new ItemStack(DSItems.dangerPotion), 1, 1, 100));
 		ChestGenHooks.addItem(ChestGenHooks.PYRAMID_DESERT_CHEST, new WeightedRandomChestContent(new ItemStack(DSItems.dangerPotion), 1, 1, 100));
