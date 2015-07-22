@@ -92,7 +92,25 @@ public class DangerSenseHandler
 	@SubscribeEvent
 	public void renderDangerOverlay(TickEvent.RenderTickEvent event)
 	{
+<<<<<<< HEAD
 		if(hostileNearby && !(mc.currentScreen instanceof GuiMainMenu))
+=======
+		/*if (OpenGlHelper.shadersSupported)
+		{
+
+		}
+		else 
+		{*/
+			ScaledResolution scaledresolution = new ScaledResolution(mc, mc.displayWidth, mc.displayHeight);
+			int k = scaledresolution.getScaledWidth();
+        	int l = scaledresolution.getScaledHeight();
+			if (event.phase == Phase.END && hostileNearby)
+			{	
+	        	
+			}
+		//}
+		if (blindSpot == 7)
+>>>>>>> origin/master
 		{
 			Tessellator tess = Tessellator.instance;
 			TextureManager textureManager = mc.getTextureManager();
