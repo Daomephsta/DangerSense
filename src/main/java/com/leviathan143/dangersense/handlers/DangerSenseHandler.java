@@ -92,9 +92,8 @@ public class DangerSenseHandler
 	@SubscribeEvent
 	public void renderDangerOverlay(TickEvent.RenderTickEvent event)
 	{
-<<<<<<< HEAD
+
 		if(hostileNearby && !(mc.currentScreen instanceof GuiMainMenu))
-=======
 		/*if (OpenGlHelper.shadersSupported)
 		{
 
@@ -110,7 +109,6 @@ public class DangerSenseHandler
 			}
 		//}
 		if (blindSpot == 7)
->>>>>>> origin/master
 		{
 			Tessellator tess = Tessellator.instance;
 			TextureManager textureManager = mc.getTextureManager();
