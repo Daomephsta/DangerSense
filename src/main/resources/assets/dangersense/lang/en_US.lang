@@ -1,4 +1,4 @@
-item.dangersense_dangerPotion.name=Dangersense Potion
+item.dangersense.dangerPotion.name=Dangersense Potion
 potion.dangersense=Danger Sense
 dangersense.potion.startMessage=Your senses are heightened
 dangersense.potion.endMessage=Your senses return to normal
