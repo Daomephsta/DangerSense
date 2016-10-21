@@ -1,4 +1,16 @@
+
+//Items
 item.dangersense.dangerPotion.name=Dangersense Potion
-potion.dangersense=Danger Sense
+item.dangersense.soulQuartzDagger.name=Soul Quartz Dagger
+item.dangersense.quartzWithSoulSand.name=Soul Sand Coated Quartz
+item.dangersense.soulQuartzCrystal.name=Soul Quartz Crystal
+
+//Effects
+potion.dangersense=Danger Sense: 
+
+//Not the name of an actual entity, I just don't want to special case the name retrieval.
+entity.detectHostiles.name=Hostiles
+
+//Chat
 dangersense.potion.startMessage=Your senses are heightened
 dangersense.potion.endMessage=Your senses return to normal

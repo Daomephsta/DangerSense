@@ -1,12 +1,6 @@
 package leviathan143.dangersense.common;
 
 import leviathan143.dangersense.common.DangerSenseMain.Constants;
-import leviathan143.dangersense.common.config.Config;
-import leviathan143.dangersense.common.handlers.DangerSenseHandler;
-import leviathan143.dangersense.common.items.ModItems;
-import leviathan143.dangersense.common.items.ModPotions;
-import leviathan143.dangersense.common.recipes.ModRecipes;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -20,7 +14,7 @@ public class DangerSenseMain
 	{
 		public static final String MODNAME = "DangerSense";
 		public static final  String  MODID = "dangersense";
-		public static final  String  VERSION = "0.1";
+		public static final  String  VERSION = "1.0.0";
 		public static final  String  CLIENT_PROXY_PATH = "leviathan143.dangersense.client.ClientProxy";
 		public static final  String  SERVER_PROXY_PATH = "leviathan143.dangersense.common.CommonProxy";
 	}
