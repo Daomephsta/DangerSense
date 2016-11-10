@@ -4,6 +4,7 @@ import java.util.List;
 
 import leviathan143.dangersense.common.config.Config;
 import leviathan143.dangersense.common.effects.EffectDangerSense;
+import leviathan143.dangersense.common.effects.ModEffects;
 import leviathan143.dangersense.common.items.ItemSoulQuartzDagger;
 import leviathan143.dangersense.common.items.ModItems;
 import net.minecraft.client.Minecraft;
@@ -30,6 +31,8 @@ public class RenderHandler
 	@SubscribeEvent
 	public void renderDangerOverlay(RenderGameOverlayEvent.Pre event)
 	{
+		if(mc.thePlayer.getActivePotionEffect(ModEffects.dangerSense) == null)
+			return;
 		if(event.getType() == ElementType.ALL && !(mc.currentScreen instanceof GuiMainMenu) && EffectDangerSense.isHostileNearby())
 		{
 			Tessellator tess = Tessellator.getInstance();

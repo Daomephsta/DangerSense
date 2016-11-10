@@ -3,7 +3,7 @@
   "modid": "dangersense",
   "name": "DangerSense",
   "description": "Gives the player a danger sense",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "mcversion": "1.10.2",
   "url": "",
   "updateUrl": "",
