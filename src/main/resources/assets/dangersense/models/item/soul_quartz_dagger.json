@@ -1,0 +1,17 @@
+{
+    "parent": "item/handheld",
+    "textures":
+    {
+    	"layer0":"dangersense:items/soul_quartz_dagger_empty"
+    },
+    "overrides":
+    [
+    	{
+    		"predicate":
+    		{
+    			"has_soul":1
+    		},
+    		"model":"dangersense:item/soul_quartz_dagger_full"
+    	}
+    ]
+}

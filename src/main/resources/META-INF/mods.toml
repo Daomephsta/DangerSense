@@ -1,0 +1,17 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+issueTrackerURL="https://github.com/Daomephsta/DangerSense/issues"
+[[mods]]
+modId="dangersense"
+version="${file.jarVersion}"
+displayName="DangerSense"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/dangersense"
+authors="Daomephsta"
+description="Adds a mob-detecting potion"
+[[dependencies.dangersense]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"

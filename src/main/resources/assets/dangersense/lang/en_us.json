@@ -1,0 +1,10 @@
+{
+	"item.dangersense.danger_potion": "Dangersense Potion",
+	"item.dangersense.soul_quartz_dagger": "Soul Quartz Dagger",
+	"item.dangersense.sandy_quartz": "Soul Sand Coated Quartz",
+	"item.dangersense.soul_quartz": "Soul Quartz Crystal",
+	"effect.dangersense.dangersense": "Danger Sense: ",
+	"entity.detect_hostiles": "Hostiles",
+	"message.dangersense.potion.start": "Your senses are heightened",
+	"message.dangersense.potion.end": "Your senses return to normal"
+}
