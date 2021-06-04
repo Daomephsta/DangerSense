@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": 
+  [
+  	{
+      "item": "dangersense:degraded_eye_of_hostility"
+    }
+  ],
+  "result": 
+  {
+    "item": "minecraft:redstone",
+    "count": 2
+  }
+}

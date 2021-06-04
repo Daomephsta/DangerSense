@@ -1,0 +1,22 @@
+{
+  "type": "dangersense:repair_eye_of_hostility",
+  "ingredients": 
+  [
+  	{
+      "item": "minecraft:spider_eye"
+    },
+    {
+      "item": "dangersense:degraded_eye_of_hostility"
+    },
+    {
+    	"tag": "dangersense:eye_of_hostility_ingredient"
+    },
+    {
+    	"tag": "dangersense:eye_of_hostility_ingredient"
+    }
+  ],
+  "result": 
+  {
+    "item": "dangersense:eye_of_hostility"
+  }
+}

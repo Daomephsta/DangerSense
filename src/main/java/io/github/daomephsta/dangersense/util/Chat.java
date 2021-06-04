@@ -1,5 +1,6 @@
 package io.github.daomephsta.dangersense.util;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.network.play.server.STitlePacket;
@@ -11,7 +12,7 @@ public abstract class Chat
 {
     private Chat() {}
 
-    public static void sendMessage(PlayerEntity recipient, ITextComponent message)
+    public static void sendMessage(Entity recipient, ITextComponent message)
     {
         if (!recipient.level.isClientSide)
             recipient.sendMessage(message, Util.NIL_UUID);

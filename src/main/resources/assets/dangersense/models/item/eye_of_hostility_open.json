@@ -2,7 +2,7 @@
     "parent": "item/generated",
     "textures":
     {
-    	"layer0":"dangersense:items/soul_quartz_crystal"
+    	"layer0":"dangersense:items/eye_of_hostility_open"
     }
 }
 

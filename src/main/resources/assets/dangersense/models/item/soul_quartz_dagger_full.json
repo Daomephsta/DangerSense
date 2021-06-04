@@ -1,8 +1,0 @@
-{
-    "parent": "dangersense:item/soul_quartz_dagger",
-    "textures":
-    {
-    	"layer0":"dangersense:items/soul_quartz_dagger_full"
-    }
-}
-

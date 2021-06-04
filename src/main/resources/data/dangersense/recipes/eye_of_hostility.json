@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": 
+  [
+  	{
+      "item": "minecraft:spider_eye"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+    	"tag": "dangersense:eye_of_hostility_ingredient"
+    },
+    {
+    	"tag": "dangersense:eye_of_hostility_ingredient"
+    }
+  ],
+  "result": 
+  {
+    "item": "dangersense:eye_of_hostility"
+  }
+}

@@ -2,7 +2,7 @@
     "parent": "item/generated",
     "textures":
     {
-    	"layer0":"dangersense:items/unsmelted_soul_quartz"
+    	"layer0":"dangersense:items/degraded_eye_of_hostility"
     }
 }
 

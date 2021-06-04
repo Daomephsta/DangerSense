@@ -1,0 +1,18 @@
+{
+    "parent": "item/generated",
+    "textures":
+    {
+    	"layer0":"dangersense:items/eye_of_hostility_closed"
+    },
+    "overrides":
+    [
+    	{
+    		"predicate":
+    		{
+    			"dangersense:is_open": 1
+    		},
+    		"model":"dangersense:item/eye_of_hostility_open"
+    	}
+    ]
+}
+
