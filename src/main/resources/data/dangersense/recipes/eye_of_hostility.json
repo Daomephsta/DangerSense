@@ -12,10 +12,10 @@
       "item": "minecraft:redstone"
     },
     {
-    	"tag": "dangersense:eye_of_hostility_ingredient"
+    	"tag": "dangersense:eye_of_hostility/ingredient"
     },
     {
-    	"tag": "dangersense:eye_of_hostility_ingredient"
+    	"tag": "dangersense:eye_of_hostility/ingredient"
     }
   ],
   "result": 

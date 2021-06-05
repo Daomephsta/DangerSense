@@ -22,9 +22,9 @@ public class DangerSenseConfig
         public final IntValue interval;
         private final BooleanValue heuristics;
         static final IOptionalNamedTag<EntityType<?>> BLACKLIST = 
-            EntityTypeTags.createOptional(DangerSense.location("eye_of_hostility/blacklist"));
+            EntityTypeTags.createOptional(DangerSense.location("blacklist"));
         static final IOptionalNamedTag<EntityType<?>> WHITELIST = 
-            EntityTypeTags.createOptional(DangerSense.location("eye_of_hostility/whitelist"));
+            EntityTypeTags.createOptional(DangerSense.location("whitelist"));
         static final IOptionalNamedTag<EntityType<?>> HOSTILE = 
             EntityTypeTags.createOptional(DangerSense.location("hostile"));
         
