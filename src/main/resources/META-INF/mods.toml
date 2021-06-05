@@ -9,6 +9,7 @@ displayName="DangerSense"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/dangersense"
 authors="Daomephsta"
 description="Adds a mob-detecting potion"
+logoFile="logo.png"
 [[dependencies.dangersense]]
     modId="minecraft"
     mandatory=true
