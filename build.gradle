@@ -92,6 +92,10 @@ dependencies {
     minecraft "net.minecraftforge:forge:${project.forgeVersion}"
 }
 
+processResources {
+    // Exclude Paint.NET texture source files
+    exclude '**/*.pdn'
+}
 
 jar {
     manifest {
