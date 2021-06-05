@@ -8,7 +8,7 @@ version="${file.jarVersion}"
 displayName="DangerSense"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/dangersense"
 authors="Daomephsta"
-description="Adds a mob-detecting potion"
+description="Adds an item for detecting nearby hostile mobs"
 logoFile="logo.png"
 [[dependencies.dangersense]]
     modId="minecraft"
