@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import io.github.daomephsta.dangersense.DangerSense;
 import io.github.daomephsta.dangersense.DangerSenseConfig;
-import io.github.daomephsta.dangersense.client.DangerSenseOverlayRenderer;
 import io.github.daomephsta.dangersense.util.Chat;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -13,7 +12,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileHelper;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemModelsProperties;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.UseAction;
 import net.minecraft.nbt.StringNBT;
@@ -35,8 +33,6 @@ public class EyeOfHostilityItem extends Item
     public EyeOfHostilityItem(Properties properties)
     {
         super(properties);
-        ItemModelsProperties.register(this, DangerSense.location("is_open"), 
-            (stack, world, entity) -> DangerSenseOverlayRenderer.isEyeActive(stack) ? 1.0F : 0.0F);
     }
     
     @Override
